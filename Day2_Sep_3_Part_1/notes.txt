@@ -1,0 +1,249 @@
+<acceesmodifier> <returntype> method_name(parameter(s)) {
+..
+..
+..
+}
+
+public void show() {
+...
+...
+...
+}
+
+public int sum(int x, int y) {
+...
+...
+...
+}
+
+Control Structures : 
+_____________________
+
+Used to define the flow of the program. There are 2 types of control structures known as
+
+(i) Branching
+
+	if...else : Executes the statement(s) based on the condition. 
+
+	  if (condition) {
+	    statement(s);
+	  } else {
+	    statement(s);
+	  }
+
+
+Write a Program to calculate current bill as assume we have units of 220 units then
+
+first 90 units 1 rs 
+
+next 91 to 150 units 1.5 rs
+
+next 151 to 200 units 2 rs
+
+next 201 to 250 units 2.5 rs 
+
+after 251 make unit price as 3 rs 
+
+for 220 units, the bill Amount is 
+
+(90*1) + (60 * 1.5) + (50 * 2) + (20 * 2.5) 
+
+(90*1) + (60 * 1.5) + (50 * 2) + (50 * 2.5) + (1 * 3)
+
+90 + 90 + 100 + 125 + 3 = 408  
+
+90 + 90 + 100 + 50 
+90 * 1 + 60 * 1.5 + (1 * 2) 
+
+_________________________________________________________________________________
+
+
+Current Bill slabs are
+
+first 90 units 1 rs
+
+91 to 150 units 1.5 rs
+
+151 to 200 units 2 rs
+
+then assume if no.of units are 80 then bill is 80 * 1 as 80 rs bill
+
+Now assume if the no.of units are 120 then
+
+90 * 1 + 30 * 1.5
+
+Assume no.of units are 165 then 
+
+90 * 1 + 60 * 1.5 + 15 * 2 
+
+
+
+Write a Program to calculate LIC Commission to the agent as
+
+  if premium is <= 10000 commission is 2%
+
+  if premium is > 10000 and 40000 then for this 2% of 10k and remaining amount 2.5%
+
+  if premium is > 40000 and 80000 then for this 2% of 10k and 2.5% of 30k and 3 for remining
+
+
+
+
+90 + 90 + 2
+
+
+		if (units > 90) {
+			billAmount = 90;
+			rate = 1.5;
+			if (units - 150 > 0) {
+				billAmount += (60 * rate);
+			} else {
+				billAmount += (units-90) * rate;
+			}
+		}
+		if (units > 150) {
+			rate = 2;
+			if (units - 200 > 0) {
+				billAmount += (50 * rate);
+			} else {
+				billAmount += (units - 150) * rate;
+			}
+		}
+		System.out.println("Total Current Bill  " +billAmount);
+
+
+
+switch...case : Used to define the menu driven programs.
+
+switch(expression) {
+    case expression1 : 
+	statement(s);
+        break;
+    case expression2 :
+	statement(s);
+        break;
+   …
+   ..
+    default : 
+	statement(s);
+        break;
+}
+
+
+
+(ii) Looping 
+
+while loop : This loop executes all the statement(s) repeatedly until the condition remains true, if the condition remains false, then it comes out of the loop. For every loop, basically there are 3 phases as 
+
+	(I) Initialization
+
+	(II) Condition
+
+	(III) Increment/Decrement 
+
+Initialization performed at the beginning of the loop.
+
+Condition performed at the conditional part of the loop.
+
+Increment/Decrement performed before closing the loop. 
+
+while(condition) {
+  statement(s);
+}
+
+for loop : This loop executes all the statement(s) repeatedly until the condition
+remains true, if the condition remains false, then it comes out of the loop. 
+
+for(initialiation;condition;increment/decrement) {
+   statement(s);
+}
+
+do...while loop : This loop executes all the statement(s) atleast once and then checks the condition. if the condition is false, then it comes out of the loop. 
+
+The difference between while loop and do...while is 
+min. execution of while loop is 0 times
+min. execution of do...while loop is 1 time. 
+
+
+Arrays : 
+________
+
+An array is the finite ordered set of homogeneous elements, means all the elements
+belongs to same data type. 
+
+All the elements of array are stored in successive memory location. 
+
+How to declare array
+
+int[] a = new int[]{12,5,33,23}; means
+
+a[0]=12;
+a[1]=5;
+a[2]=33;
+a[3]=23;
+
+int[] a = new int[] {12,55,22,66,23};
+//		for(int i=0;i<a.length;i++) {
+//			System.out.println(a[i]);
+//		}
+		
+		for (int i : a) {
+			System.out.println(i);
+		}
+
+How Internally foreach loop is working ???
+
+foreach loop internally will have IEnumerable interface, here 
+
+at first I points to the first element in array a, after processing first element, it checks
+next element is there or not by using hasMoreElements(), if hasMoreElements() returns true, it moves to the
+next element by using nextElement().  It repeats as soon as hasMoreElements() returns true.
+
+How to create a method in java,
+
+you need to specify as 
+
+access_modifier returnType method_Name(params) {
+…
+…
+…
+}
+
+if a method never returns any value, then it prefix with void 
+
+You can create an object to the class, as 
+
+class_name obj = new class_name();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
