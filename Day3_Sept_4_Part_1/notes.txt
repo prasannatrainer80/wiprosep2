@@ -1,0 +1,97 @@
+Boxing and Unboxing : 
+______________________
+
+	The concept of converting value types to reference types known as boxing and reference types to value types known as unboxing. 
+
+Object is the type that which can be used for boxing and unboxing. 
+
+int a;
+
+a=53.23
+a=12;
+a="Hello"
+
+Object a;
+
+a=53.23;
+a=12;
+a="Hello";
+
+If it is in Object format we cannot perform any calculations. So, we need to unbox the data, then only we can 
+access them. 
+
+What are main methods of object class. 
+
+toString() -> This method having string representation, this method will be called automatically once you print the object. 
+
+hashCode() : used to display memory location address number. 
+
+Method Overloading : The concept of using the same method name w.r.t. different data types or different parameters known as method overloading. 
+
+Here, the method name must be same, but no.of parameters or type of parameters we are using here are different. 
+
+class Data {
+    int a,b;
+    a=5;
+    b=7;
+}
+
+class never contains code directly, as class contains only
+data members and member variables.  as any code we need to write in main only. 
+
+as if you want to write code it must be within method. 
+
+But, if you want to give default values to member variables then we need the help of constructors. 
+
+A constructor is a special member, which used to initialize the member variables of the class, it is special
+because it has the same name as that of class name. 
+
+Rules : 
+________
+
+(I) It will not contains any return type
+
+(ii) It will not return any value
+
+(iii) It will be invoked automatically once the instance of the class created
+
+(iv) A constructor can be overloaded. 
+
+Types of constructors : 
+________________________
+
+There are 2 types of constructors in java as 
+
+1) static constructors : These are called class constructors, which are used to initialize the static variables of the class, these constructors used to initialize the static variables of the class, these constructors are invoked automatically before control reaches entry point. These constructors cannot be overloaded. (In java, we don't have any static constructor, as static block acts as static constructor)
+
+2) instance constructors : These are the constructors that which are invoked automatically once the instance of the class created, these constructors cannot be overloaded. 
+
+static variable : These are the variables, that which retains values irrespective of type of object. 
+
+Inheritance : Deriving a new class from already existing class known as inheritance, through inheritance we can reduce the size of the program. 
+
+Without writing code again and again once inheritance is there we can reuse the existing code. 
+
+class First {
+...
+...
+}
+
+class Second extends First {
+...
+...
+}
+
+Once you create an object to Second class, you can access all public/protected and friendly members of base class. 
+
+super keyword : If you want to pass values from derived class to base class, then we need the help of super keyword. It has 2 forms as 
+
+	(i) super as a keyword
+
+	(ii) super as a constructor 
+
+
+
+
+
+
