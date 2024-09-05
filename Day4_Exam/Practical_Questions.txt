@@ -1,0 +1,13 @@
+Practical Questions : 
+______________________
+
+1) Write a Program to convert a number from binary to decimal
+
+2) Write a program to create an abstract class as Animal contains methods as name() and type() of void,
+
+create 3 subclasses as Cow, Crocodile and Lion and print them.
+
+3) Create an interface as IMobile contains 2 methods as model() and cost(), then the corresponding classes of 
+iPhone, Samsung, Nokia to implement an interface and show their members. 
+
+3.1) Add 10 objects of combination of classes and print only iPhone class data only
