@@ -1,0 +1,80 @@
+Enums : If you want to make any group of constant then we need the help of Enum. 
+
+assume, we have weekdays 
+
+To deal with dates in util package we have Date class
+
+as 
+
+import java.util.Date;
+
+You can create a date object as
+
+Date obj = new Date();
+
+To Convert date into particular format, then 
+
+SimpleDateFormat class we need to use. 
+
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+sdf.format(date) -> Then it prints in your specific format. 
+
+Calendar Class allows you to perform date wise calculations. 
+
+You can create Calendar instance as
+
+Calendar cal = Calendar.getInstance();
+
+_________________________________________________________________________________________________
+
+Exception Handling is a mechanism of handling the runtime errors, during execution of the program. There are 2 types of errors known as 
+		
+	(i) Compile Time Errors
+
+	(ii) Runtime Errors 
+
+During runtime if we pass invalid values, the type of errors we are getting known as runtime errors. 
+
+By using Exception handling we can overcome the runtime errors. 
+
+To handle errors, we have 3 blocks known as
+
+1) try block : This block contains statements in which there is possibility of getting runtime errors, the statements which are placed in this block are treaed as heavy weighted statements as JVM allocates excess
+memory to them. 
+
+2) catch block : Once exception raised in try block then the control will be forwarded to catch block, this block contains alternate statements for exceptions raised in try block, one try block can contains multiple catch blocks, 
+
+3) finally block : This block contains statements that needs to be executed mandatorily irrespective of try and catch block, this block is not mandatory, but all the statements which are placed in this block are executed as mandatory statements. 
+
+Exception is the top most class from which all kinds of exceptions are derived. 
+
+try {
+...
+...
+} catch (Exception e) {
+...
+...
+} finally {
+...
+...
+}
+
+printStackTrace() : This method given entire information about error, as Exception class, line number, char pos error message. 
+
+ArithmeticExcption -> if division by zero attempts
+ArrayIndexOutOfBoundsException -> If array size exceeds
+InputMismatchException -> If string entered in place of number
+
+
+
+
+
+
+
+
+
+
+
+
+
