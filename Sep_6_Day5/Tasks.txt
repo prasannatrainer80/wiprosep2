@@ -1,0 +1,16 @@
+1) Write a program to check the given string is valid email or not 
+
+if '@' is not there raise user defined exception InvalidEmailException
+
+
+Create one Exception class as EmployException 
+
+2) Write a Program to read Employ Details as (empno,name,gender,dept,desig,basic)
+
+   -> if empno <=0  and >= 1000 then raise Exception as "Employ No cannot be negative/zero or greater than
+			1000"
+
+   -> name contains min 5 chars else raise Exception as "Name contains min 5 chars "
+
+   -> basic must be > 10000 and < 90000 else raise Exception as "Basic Must be between 10000 and 90000 only
+

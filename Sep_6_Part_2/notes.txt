@@ -1,0 +1,27 @@
+Collections : Arrays are static data structures, once they are assigned we cannot alter the size, but if you want to add elements irrespective of size, then we need the help of collections. Collections can grow to any size unlike arrays. 
+
+collections are from util package. 
+
+Collections takes data in Object format, so we need to unbox the data. 
+
+The top 3 interfaces in collections are 
+
+(I) List : Contains List of elements in sequential order.  In List, we have 
+
+	ArrayList class falls under this. 
+
+
+
+(ii) Set : Allows you to eliminate duplicate entries from the given collection. HashSet is falling under List interface. 
+
+HashSet allows you to display data in random order, but if you want to display data in insertion order, then
+we need the help of LinkedHashSet. 
+
+
+
+(iii) SortedSet : Allows you to display data in sorted Order. 
+
+TreeSet is falling under SortedSet.
+
+
+
