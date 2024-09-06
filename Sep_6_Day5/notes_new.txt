@@ -1,0 +1,137 @@
+Enums : If you want to make any group of constant then we need the help of Enum. 
+
+assume, we have weekdays 
+
+To deal with dates in util package we have Date class
+
+as 
+
+import java.util.Date;
+
+You can create a date object as
+
+Date obj = new Date();
+
+To Convert date into particular format, then 
+
+SimpleDateFormat class we need to use. 
+
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+sdf.format(date) -> Then it prints in your specific format. 
+
+Calendar Class allows you to perform date wise calculations. 
+
+You can create Calendar instance as
+
+Calendar cal = Calendar.getInstance();
+
+_________________________________________________________________________________________________
+
+Exception Handling is a mechanism of handling the runtime errors, during execution of the program. There are 2 types of errors known as 
+		
+	(i) Compile Time Errors
+
+	(ii) Runtime Errors 
+
+During runtime if we pass invalid values, the type of errors we are getting known as runtime errors. 
+
+By using Exception handling we can overcome the runtime errors. 
+
+To handle errors, we have 3 blocks known as
+
+1) try block : This block contains statements in which there is possibility of getting runtime errors, the statements which are placed in this block are treaed as heavy weighted statements as JVM allocates excess
+memory to them. 
+
+2) catch block : Once exception raised in try block then the control will be forwarded to catch block, this block contains alternate statements for exceptions raised in try block, one try block can contains multiple catch blocks, 
+
+3) finally block : This block contains statements that needs to be executed mandatorily irrespective of try and catch block, this block is not mandatory, but all the statements which are placed in this block are executed as mandatory statements. 
+
+Exception is the top most class from which all kinds of exceptions are derived. 
+
+try {
+...
+...
+} catch (Exception e) {
+...
+...
+} finally {
+...
+...
+}
+
+printStackTrace() : This method given entire information about error, as Exception class, line number, char pos error message. 
+
+ArithmeticExcption -> if division by zero attempts
+ArrayIndexOutOfBoundsException -> If array size exceeds
+InputMismatchException -> If string entered in place of number
+
+There are 2 types of exceptions known as 
+
+(i) Checked Exceptions : These are the exceptions which comes at compile time, during compilation JVM feels some erroneous code is there and stops the execution at compile time, will be handled at method level by using throws keyword. 
+
+(ii) Unchecked Exceptions : These are the exceptions that which occurs at runtime, can be handled by using try...catch block. 
+
+throws keyword : This keyword will be used at method level to avoid exceptions for timebeing. 
+
+in throws we can use Exception class only.
+
+throw keyword : If you want to throw exceptions based on the condition, then we need the help of throw keyword. Till now JVM is throwing the errors, but if you want to throw Exceptions based on the condition,then we need the help of throw keyword. 
+
+throws will be at method level, throw will be at coding level.
+
+How to create user-defined exceptions, 
+
+System Exceptions are inadequate in handle in all situations, to overcome this we need the help of custom exceptions, any class, that which derived from Exception can be treated as custom exception. 
+
+class class_name extends Exception {
+
+}
+
+this class treated as exception class, for exception class we need to define Error message and all by ourself. 
+
+class CustomExeception extends Exception {
+   CustomException(String error) {
+    super(error);
+   }
+}
+
+Write a program to check a person eligible for voting or not. if not raise user defined exception as 
+VotingException 
+
+super constructor catches error from corresponding class and stores in error variables\
+
+as you give throws new VotingExcepiton("You annot Vote")
+
+then this error message will be stored in constructor variable
+
+that will be send to Excetption class
+
+as you print error message it prints from getMessage()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
