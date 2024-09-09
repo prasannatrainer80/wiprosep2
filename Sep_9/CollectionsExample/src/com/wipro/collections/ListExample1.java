@@ -13,6 +13,8 @@ public class ListExample1 {
 		names.add("Lavanya");
 		names.add("Muhammed");
 		names.add("Kalpana");
+//		names.add(12);
+//		names.add(true);
 		
 		System.out.println("Array List Values are  ");
 		for (Object object : names) {
