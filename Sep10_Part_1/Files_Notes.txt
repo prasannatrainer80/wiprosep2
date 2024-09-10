@@ -1,0 +1,79 @@
+
+
+Files : 
+
+    A file is a collection of data, which allows you to store the output
+permanently. To deal with files, we need the help of java.io package. 
+
+File class : This class allows you to deal with file properties.
+
+File obj = new File("filename");
+
+getName()
+getParent()
+getPath()
+
+FileReader : Allows you to read data from file w.r.t. Unicode format. 
+This class allows you to read text info only. 
+
+syntax : 
+__________
+
+FileReader fr = new FileReader(filename);
+
+read() -> Used to read data char/char and returns ascii value, it return -1 once it reaches EOF.
+
+FileWriter : Used to write data into the file
+
+FileWriter fw = new FileWriter(filename);
+
+write() : Used to write data char/char
+
+FileInputStream : Used to read data w.r.t. Stream of bytes, as we can read any kind data like text/image/video or raw etc...
+
+FileInputStream fin = new FileInputStream(filename);
+
+read() : used to read data char/char and returns ascii value, it returns -1 once it reaches eof.
+
+FileOutputStream : Used to write data into file w.r.t. Stream of bytes. 
+
+FileOutputStream fout = new FileOutputStream(filename);
+
+write() : Used to write data into the file. 
+
+DataOutputStream : Used to write Primitive data types into the file. 
+
+DataOutputStream dout = new DataOutputStream(fout);
+
+writeInt()
+writeUTF()
+writeDouble()
+writeBoolean()
+
+BufferedReader : Allows you to read custom input from the keyboard. 
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+readLine() : used to read one line of input. 
+
+ObjectOuputStream : Used to write objects into the file. 
+
+ObjectOutputStream objout = new ObjectOutputStream(filename);
+
+writeObject() : used to write objects into the file. 
+
+Serilization is the process of writing the custom objects into the file. 
+
+Any user defined class objects to be stored they must be implemented with Serilizable interface
+
+Properties : Allows you to control the internal behavior of particular entity. 
+
+If you want to represent method as a field, then we need the help of properites. 
+
+Properties can be defined by using getters and setters. 
+
+for readonly properites we don't have any getters
+for writeonly properties we don't have any setters
+
+for normal properties we have both getters and setters
+
