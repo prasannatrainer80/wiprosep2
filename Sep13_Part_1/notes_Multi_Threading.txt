@@ -1,0 +1,81 @@
+Multi-Threading : 
+__________________
+
+
+A thread is a sequential execution of path of program, in multi-threading more than one task
+can be performed in a single program simultaneously. 
+
+If you want to make best utilization of CPU resources then we need the help of multi-threading,
+as idle time kept to be minimum. 
+
+It is a conceptual programming where a program divided into two or more subprograms,
+which can be implemented at the same time parallel.  A thread is similar to the
+program that has a single flow of control.
+It has beginning , body and end. 
+
+Multithrading is a powerful programming tool that makes java distinctly different from its fellow
+programming languages. 
+
+In Multi-threading we have various method(s) as
+
+1) start()  -> Used to invoke the given thread.
+
+2) run()    -> Once start() invokes the code which is there in run() gets excuted.
+
+3) sleep() -> Makes a thread to wait for specific milliseconds time. 
+
+Creating Threads : Threads are implemented in the form of objects, that contains a method called
+run().
+
+Life Cycle of Thread : 
+_______________________
+
+(i) New Born State : When we create a thread object, the thread is born and said to be new born state, Here the thread is not scheduled for running. 
+
+(ii) Runnable State : This state means that the thread is ready for execution and is waiting for the availability of the processor, that is, thread joined queue of threads that are waiting for execution. If all threads are having equal priority then the time slots for execution comes in first-come first-serve manner.
+
+(iii) Running State : The processor has given its time to the thread for its execution, the thread runs until it relinquishes control on its own or it is preempted by a high priority thread. 
+
+(iv) Blocked State : A thread said to be blocked when it is prevented from entering into the running state and subsequentily the running state. This happens when the thread is suspended, waiting or sleeping 
+
+(v) Dead State : A thread enters into dead state, when all the statements of the thread are executed successfully, or forcing calls abort() method. 
+
+You can create a thread in 2 ways as
+
+1) extends Thread
+
+2) implements Runnable 
+
+synchronization :   If two or more threads trying to access same resource at same time, it leads
+__________________
+to confusion. To overcome this unless one thread leaves the particular location another thread will not be entered. This concept is known as synchronization. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
