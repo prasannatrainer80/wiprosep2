@@ -1,0 +1,46 @@
+
+Quality : Quality is defined as justification of all requirements of a customer on product. 
+
+Its defined as not only as justifications of requirements, but also the presence of value
+(user-friendliness).
+
+Quality is not defined in the product, it is defined in the customer mind. 
+
+Testing : 
+
+It is a process in which the defects are identified, isolated and subjected for 
+rectification and ensures that the product is defect free inorder to produce
+the quality of product in the end and hence leads to customer satisfaction. 
+
+The proof of testing phase is a quality product. 
+
+Test Case 
+__________
+
+	It is an idea of a test engineer to test something on an application based on the 
+		requirements.
+
+Unit testing is type of testing ensures each and every line of the code needs to be tested ensures
+that produces quality of code includes code coverage, line coverage etc...
+
+Unit Testing Can be done by the developers. 
+
+1) Defect : If tester finds something known as defect.
+
+2) Bug : If programmer accepts the defect known as bug. 
+
+*** All defects are not bugs, but all bugs are defects ***
+
+3) Error : If programmer identifies some mistake known as error. 
+
+4) Fatal : If client identifies some mistake known as fatal.
+
+@BeforeAll : Indicates that the annotated method should be executed before all tests in the test class
+
+@AfterAll : Indicates that the annotated method should be executed after all tests in the test class
+
+@BeforeEach : Indicates that the annotated method should be executed before each test
+
+@AfterEach : Indicates that the annotated method should be executed after each test
+
+
