@@ -1,0 +1,139 @@
+1) What is Maven
+
+2) Why Maven
+
+3) Maven Architecture
+
+4) Life Cycle
+
+5 Create Maven Project
+
+_____________________________________________________________
+
+Before Maven, we need to add external jar files to the given project, that makes application more complicated and heavy weighted. To overcome this we need to make maven project. 
+
+What is Maven :
+________________
+
+Maven is a project management and comprehension tool that provides developers a complete build lifecycle framework. Development team can automate the project's build infrastructure in almost no time as maven uses a standard directory layout and default build lifecycle. 
+
+Maven can setup the way to work as per standards, in a very shorttime, As most of the project setups are simple and reusable, maven makes life of developer easy while createing reports, checks, build and testing automation setups. 
+
+The heart for maven project is pom.xml (Project Object Model) it is the fundamental unit of work in maven. 
+
+It is an xml file that resides in the base directory of project pom.xml 
+
+The POM contains information about the project and various configuration details used by Maen to build the reports. 
+
+What config. information that can be specified in the POM are : 
+
+-> Project Dependencies
+-> Plugins
+-> Goals
+-> build profiles
+-> project version
+-> developers
+-> mailing list 
+
+Maven project contains main things as
+
+<groupId> : This is an id of project's group. This is generally unique amonst an organization or project, for ex, if it is testing org.junit, if it is MySQL com.mysql etc...
+
+<artifactId> : This is an id for project. Whatever name you give as artifactId is the name of the project. 
+<version> : The version of jar file to be downloaded needs to work in version. 
+
+ Any data to be defined in 
+
+<dependencies>
+</dependencies> 
+
+Section.
+
+How the maven works, 
+
+Maven will have various repositories as 
+
+1) Local : This is the folder in your local machine.  It gets created automatically when you run any maven command for first time. c:\users\user_name\.m2 folder comes as maven local repo. 
+
+2) Central : Which is coming from central site all jars are downloaded. First time when you run maven project first it checks dependencies are available in local or not, if not available in local then it his central repo 
+
+http://repo1.maven.org/maven2  this is the central url from where we can download jars
+
+-> This repository managed by Maven Community.
+-> It is not required to be configured
+-> It requires internet access to be searched.
+
+3) Remote : Sometimes, maven does not find mentioned dependency in central repository as well, 
+then it stops the build process. To prevent this situation maven provides concept called Remote Repository, which is developer's own custom repositorty containing required libraries for other project jars. 
+
+JDBC (Java Database Connectivity) Java Applications cannot directly communicate with database to submit data and retrieve the results of queries.  You need a mechanism to translate java statements into SQL statements. That can be provided by using JDBC.  
+
+JDBC Architecture classified into 2 types 
+
+Application Layer : Signifies java application that uses a JDBC API to interact with the JDBC Drivers.
+
+Jdbc Driver Layer : Acts as an interface between java application and database. This layer contains a driver such as SQL Driver or Oracle Driver, which enables you to connect to the database. A driver sends a request of a java application to the database. After processing the request, the database sends the response back to the driver. The driver translates and sends the response to the JDBC API. 
+
+There are various types of drivers as
+
+Type 1 (JDBC-ODBC Bridge Driver)
+
+Type 2 (Native API partly Java Driver)
+
+Type 3 (JDBC Net Pure Java Driver)
+
+Type 4 (Native Protocol Pure Java Driver) This is called type 4 driver, it is java driver that interacts with the database directly using vendor-specific network protocol, As opposed to other JDBC drivers, you do not require to install any vendor-specific libraries to use the type 4 driver.
+
+
+_________________________________________________________________________________
+
+You need to load the database drivers and JDBC API while developing a java application to retrieve or store data in a database. 
+
+DriverManager Class : Loads the driver for a database. 
+
+1) Load a Driver
+
+2) Connect to the Database
+
+3) Create and Execute JDBC Statements
+
+4) Handle SQL Exceptions 
+
+
+Class.forName("com.mysql.cj.jdbc.Driver");
+
+Connection : This interface allows you to connect to the particular database. 
+
+Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/wipro","root","root");
+
+PreparedStatement : This interface allows you to run any valid sql command. 
+
+PreparedStatement pst = connection.prepareStatement("select * from Employ",connection);
+
+ResultSet : To Store the records that which are retrieved by PreparedStatement, we need the help of resultset. 
+
+executeQuery() -> To run select command
+
+executeUpdate() -> For Insert/Update and Delete Operations. 
+
+ResultSet rs = pst.executeQuery(); 
+
+rs.next() -> Used to record to next records. 
+
+PreparedStatement interface derived from Statement interface, which allows you to pass data types at runtime. 
+
+String cmd = "select * from Employ where empno = ?";
+PreparedStatement pst = connection.prepareStatement(cmd);
+pst.setInt(1,4);
+
+Means in the first ? position apply the value 4. 
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+1) Write a Java program to create a method that takes a string as input and throws an exception if the string does not contain vowels.
+
+2)Write a programto create a class as Customer
+custId  -> Integer
+custName -> String
+city  -> String
+premium -> double
+gender - ENUM (MALE, FEMALE)
+
+as add 10 records and sort them based on custName, premium, gender
+
+3) Write a java program to Create a class as Verdict 
+
+verdictId  -> int
+verdictName  -> String
+age -> int
+comments -> String
+city -> String
+
+add duplicate records into HashSet and remove them and show 
+
+
+

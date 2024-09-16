@@ -1,0 +1,52 @@
+What is Collection ???
+
+Arrays are static data structures, means once they are assigned we cannot alter 
+the value, but if you want to enter values irrespective of size, then we need
+the help of collections. Collections can grow to any size unlike arrays. 
+
+Collections are from util package. 
+
+Collections holds data in Object format, as we need to unbox them.
+
+In Collections, we have top 3 interfaces are there known as
+
+(i) List : This collections allows you to display data w.r.t. Serilized format, ArrayList is falling under List interface. 
+
+(ii) Set : Allows you to eliminate duplicate entries from the given collection. 
+
+HashSet and LinkedHashSet are falling under Set Interface.
+
+What is difference between HashSet and LinkedHashSet 
+
+HashSet Displays data in random order, where LinkedHashSet used to display data in insertion order.
+
+(iii) SortedSet : Used to display data in sorted format, TreeSet is falling under SortedSet. 
+
+If i given any class objects to SortedSet, how it will sort. 
+
+To Sort any custom classes, we need to specify parameter on which basis we need to sort.
+
+
+That can be specified by using separate class implemented with Comparator interface, in Comparator interface we have compare() method, in that we need to write the code on which parameter basis we need to sort. 
+
+That class object needs to be passed to comparator in main.
+
+Map interface : This interface allows you to store data w.r.t. Key Value pairs. In that we have HashTable and HashMap are falling under this. 
+
+Generics : Generics provides an opportunity to define data types at runtime, if you want to make methods as write once and apply for all types then we need the help of generics. 
+
+Generics will be represented by using <T>, means in place of <T> we can pass any value type or reference type or custom type. 
+
+Advantages with generics : 
+____________________________
+
+	Write Once and Apply for all types
+
+	Provides Security to data
+
+	No Typecasting
+
+	Reduces the size of the program. 
+
+
+
