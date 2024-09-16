@@ -1,0 +1,150 @@
+
+Web Applications : These are the applications, that which are to be called from 
+various places rather than where they are created. 
+
+If you want to make any distributed or robust applications, then we need the help of
+web applications. 
+
+You can create web applications in 2 ways as
+
+1) Scripting Languages
+
+2) Programming Languages 
+
+Scripting Languages are languages that which are interpreted, during runtime they 
+takes lot of time to execute. 
+
+Programming languages are langauges that which are compiled first, during runtime they takes very les time to execute. 
+
+In Web Applications, we can implement both 
+
+(a) Client-Side
+
+	Enables you to access the application from client-system. 
+
+	No Network traffic
+
+	Execution will be faster 
+
+(b) Server-Side 
+
+	Enables you to access the application from the Server
+
+	Network traffic is high
+
+	A bit slower. 
+
+
+Any intranet based application w.r.t. No Security please opt for client-side scripting
+
+Any internet based application w.r.t. Min. security please opt for both 
+	client-side/server-side scripting
+
+Any internet based application w.r.t. High security, please opt for 
+	server-side scripting 
+
+HTML (HyperText Markup Language) : Which allows you to create any sample web pages. 
+
+You can start with HTML, by using 
+
+<html>
+</html>
+
+<head>
+</head> : Used to define global content for the given page. 
+
+<title>
+</title> : Used to display heading on title bar.  
+
+<body>
+</body> : Contains the actual content to be rendered. 
+
+How to define data w.r.t. Definition and answers 
+
+<dl>
+</dl> : Used to start definition language
+
+<dt>
+</dt> : Used to start definition Term.
+
+<dd> 
+</dd> : Used to define the definition description 
+
+To place an image in the page, then we need
+
+<img src="imageName" height width alt /> 
+
+Anchor tag : Used to define links for local or external pages. 
+
+<a href="target_page"> Display Text</a>
+
+Forms : Allows you to accept input from the keyboard. You can define forms by using <form></form> tag. 
+
+Now, we have various controls available in this as 
+
+<input type="text" /> TextBox
+
+<input type="password" /> Password
+
+<input type="button" /> Button
+
+<input type="submit" /> Submit Button
+
+<input type="checkbox" /> Checkbox. 
+
+Tables : Allows you to display data w.r.t. Rows and columns. 
+
+You can specify tables, by using 
+
+<table>
+</table>
+
+<tr> : Used to add new row to the table. 
+
+<th> : Used to add new heading column to the given table. 
+
+<td> : Used to add new data column to the given table. 
+
+CSS (Cascading Style Sheet) 
+
+Allows you to define styling rules for the given HTML document. 
+
+If you want to make any cosmatic changes in the given page, then we need the help of CSS. 
+
+There are various types of style sheets known as 
+
+1) Inline style sheet : To be defined the the style property of the particular tag.
+
+2) Internal Style Sheet : Allows you to define style for entire document, preferrable write in <head> section.
+
+3) External Style Sheet : Allows you to define stylesheets in css file to be called in multiple html pages whenever you want. 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
