@@ -1,0 +1,167 @@
+1) Write the order for Sql Queries based on priority
+
+A) Group By...Having...Where...Order By
+B) Order By...Group By...Having...Where...
+C) Where...Group By...Having...Order By
+D) None
+
+2) Identity valid query that which returns records whose name starts with S
+
+A) select * from Employ where name='s?'
+B) select * from Employ where name='s%'
+C) select * from Employ where name in('S')
+D) select * from Employ where name like 'S%'
+
+3) Identify the correct syntax for group by below
+
+A) select dept, sum(basic) from emp group by dept
+B) select dept, sum(basic) from emp group by dept where job is not null
+C) select dept, sum(basic) from Emp where sum(sal) > 15000
+D) select dept, sum(basic) from Emp group by dept having dept is not null
+
+4) Identify the output for below query
+
+ select round(9888.8788,-2)
+
+A) 97 B) 99 C) 988 D) None 
+
+5) Identify alter command to add primary key on empno fiend
+
+A) Alter table table_name modify primary key(empno)
+B) Alter table table_name add empno int primary key
+C) Alter table table_name add primary key(empno)
+D) Alter table table_name add empno primary key int
+
+6) Identify valid update command below
+
+A) Update table table_name set field1=new value
+
+B) Update table_name set field1=new_valule where condition
+
+c) Update table_name modify field1=new_Value where condition
+
+D) Update table_name assign field1=new_value where condition
+
+7) What is the difference between DELETE and TRUNCATE commands
+
+A) Delete command used to delete particular records where Truncate used to delete all records
+
+B) Truncate is more powerful than Delete command
+
+C) By using delete command we can rollback the records, but by using Truncate command we cannot rollback records
+
+D) Delete and Truncate functionality same no change 
+
+8) What is Referential Integrity 
+
+A) Ensures that each row can be uniquely identified by an attribute called the primary key. The primary key column contains unique value in all the rows. This column cannot be NULL.
+
+B) Ensures that only a valid range of values is stored in a column. It can be enforced by restricting the type of data.  For suppose the dept field need to contain the list of values as 'computers' or 'physics' or 'maths' then it is coming under the part of domain integrity. 
+
+C) Ensures that the values of the foreign key match the values of the corresponding primary key. 
+
+D) Refers to a set of rules specified by a user, which do not belong to the entity, domain and referential integiry categories. 
+
+9) Which keyword allows you to eliminate duplicate entries at the time of display
+
+A) DELETE B) DISTINCT C) ALTER D) DROP 
+
+10) Which join produces cartician product of two given tables 
+
+A) INNER JOIN B) OUTER JOIN C) SELF JOIN D) CROSS JOIN
+
+11) Identify Correct statement(s) below
+
+A) Inner Join retrieves only common records from given table(s)
+B) Outer Join Retrieves matching/unmatching records from table(s)
+C) You can join a table with itself
+D) All the Above 
+
+12) What is the output for below query 
+ select ceil(12.00001) 
+
+A) 13 B) 12 C) 11 D) None 
+
+13) What are the characterstics of primary key
+
+A) primary key cannot be NULL
+B) Primary Key cannot be duplicated
+C) Primar Key contains clustered index
+D) All the Above 
+
+14) Which statement is true about foreign key
+
+A) You can create primary key constraint on foreign key
+B) Foreign key used to link tables in parent/child format
+C) You can use the foreign key constraint to remove the inconsistency in two tables when the data in one table depends on the data in another table. 
+D) All the Above
+
+15) What is the output for below query
+
+select * from Agent where AgentID = ANY(10,20,30)
+
+A) Display all records where AgentID is 10 AND 20 AND 30
+B) Display ALl records where AgentID is 10 OR 20 OR 30 
+C) Query syntax is wrong
+D) Display all records where AgentID NOT equal to 10 or 20 or 30 
+
+16) Identify query that which returns 2nd max. salary
+
+A) select sal from Emp where sal = (select max(sal) from Emp)
+B) select max(sal) from Emp where sal < (select Max(sal) from Emp)
+C) select max(sal) from Emp where sal = (select max(sal) from Emp)
+D) None
+
+17) Identify the valid command to Insert records into EMP table
+
+A) Insert into Emp(Empno,Name,Basic) values(1,'Raj')
+B) Insert into Emp(Empno,Name,Basic) values(1,'Raj',98233)
+C) Insert into Emp(Empno,Name,Basic) values(1,'Raj','Java',84822)
+D) Insert into Emp(Empno,Name,Basic,Dept) values(1,'Raj',99922)
+
+18) What is the below command do DROP TABLE EMPLOY
+
+A) Deletes the records of EMPLOY table
+B) Deletes the entire table and records 
+C) Syntax Error in Command
+D) Checks the table Employ is there or not 
+
+19) What is the below code snippet will do
+ ALTER TABLE STUDENT ADD CITY Varchar(30)
+
+A) Checks if the column city exists or not
+B) Adds the Column City to table
+C) Syntax Error
+D) None of Above 
+
+20) What is the below code snippet will do
+DELETE FROM STUDENT WHERE AGE=16
+A) Delete all records whose age is less than 16
+B) Delete all records whose age is 16
+C) delete all records of Student Table 
+D) Syntax Error in Command 
+
+21) When is the Wildcard in WHERE Clause used
+
+A) An exact match is necessary in CREATE statement
+B) An Exact match not possible in SELECT statement
+C) An Exact match is necesasry for the SELECT Statement
+D) None of Above 
+
+22) DDL Stands for
+
+A) Data Derivation Language B) Data Dynamic Language C) Data Definition Language
+D) None 
+
+23) Which SQL Constraint used to set some value to the field 
+
+A) CHECK B) NOT NULL C) DEFAULT D) UNIQUE 
+
+24) Which of the following used to identify rows in table 
+
+A) Schema B) Super Key C) Domain D) Attribute 
+
+25) Identify valid sql constraints below
+
+A) NOT NULL B) CHECK C) UNIQUE D) ALL THE ABOVE 
+
