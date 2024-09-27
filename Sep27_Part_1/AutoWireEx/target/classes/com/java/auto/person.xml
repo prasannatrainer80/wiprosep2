@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+	   
+<context:annotation-config/>
+	<bean id="jobDetails" class="com.java.auto.JobDetails">
+		<property name="job" value="Software Engineer"/>
+		<property name="company" value="Wipro"/>
+		<property name="location" value="Bangalore"/>
+	</bean>
+	<bean id="beanKalpana" class="com.java.auto.Person">
+		<property name="id" value="1" />
+		<property name="name" value="Kalpana" />
+		<property name="familyDetails">
+			<bean class="com.java.auto.Family">
+				<property name="city" value="Chennai" />
+				<property name="state" value="TN" />
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

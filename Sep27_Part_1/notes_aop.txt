@@ -1,0 +1,28 @@
+Spring AOP (Aspect Oriented Programming) is a paradigm that complements object-oriented programming.
+
+The AOP module is one of the core components that enables important functionalities such as application auditing, transactional management, and security. 
+
+AOP referred to as a tool for implementing cross-cutting concerns.  The term crosscutting concerns refers to a logic in an application that cannot be decomposed from the rest of the application and may result in the code duplication and tight coupling. By using AOP for modularizing individual pieces of logic, known as concerns, you can apply them to many parts of an application without duplicating the code or creating hard dependencies. 
+
+Logging and security are typical examples of crosscutting concerns that are present in many applications.  You often need to log actions or check if someone has permission in many parts of your program. AOP helps you do this without writing the same code all over place.
+
+AOP is having various architecture as 
+
+The Core architecture of Spring AOP is based on proxies. When the application initialized, an 
+advise instance of a class created as a result of a ProxyFactory creating proxy instance of that
+class 
+
+AOP contains various architecture elements known as
+
+1) JointPoint : Is a point of execution of the program, such as executing a method or handling an exception, In spring AOP, jointpoint always represents method of execution. 
+
+2) Advice : The code that to be executed for particular jointpoint. There are many types of advices as before, after etc...
+
+3) Aspect : Is the combination of advices and pointcuts
+
+4) Pointcut : Is a predicate or expression that matches jointpoints. 
+
+5) Weaving
+
+6) Target 
+
