@@ -1,0 +1,33 @@
+Spring Boot Actuator : Is a sub-project of spring boot, it includes no.of additional features that help us to monitor and manage the spring boot application.
+
+Actuator contains
+
+	-> EndPoints (the place where the resources live)
+	-> HTTP and JMX endpoints to manage and monitor app
+
+	It will have production ready features we should use the spring boot actuator
+
+It has 3 main features known as
+
+	-> EndPoints : Allows us to monitor and interact with the application, 
+		we have built-in endpoints, we can also create our own endpoint
+		We can enable or disable each end point individually.  
+	   Each endpoint will have prefix as /actuator
+
+	-> Metrics :  Provides dimensional metrics by integrating with the micrometer.
+		It is integrated into Spring Boot, it is the instrumentation lib powering the
+		delivery of app metrics from spring
+
+	-> Audit : Spring Boot provides flexible audit framework that publishes events to an
+		AuditEvenRepository, it automatically publishes the authentication events. 
+
+ In Actuator, we can create custom end points, the main annotations for custom endpoints are
+
+@Endpoint : Marks a class as the endpoint to be exposed by the Spring Boot Actuator, This annotation can be used on the class level
+
+@ReadOperation : It indicates that the annotated method should handle Get request for the custom endpoint. This annotation can be used methods w
+
+@WriteOperation : Indicates that annotated method should handle the POST requests for the custom endpoint.  This annotation can be used on methods within @EndPOint
+
+@DeleteOperation : It indicates that the annotated methods should handle DELETE request for the custom endpoint. This annotation can be used on methods within @Endpoint class
+
