@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script>
+            var employs = [
+                "Archana","Simran","Subbarayudu",
+                "Gangamani","Shyam"
+            ]
+        </script>
+    </head>
+<body>
+    <form name="frmLeave">
+        <table border="3" align="center">
+            <tr>
+                <th colspan="2">Leave Application Form</th>
+            </tr>
+            <tr>
+                <th>
+                    Employ Name 
+                </th>
+                <td>
+                    <select name="employ">
+                        <option value="Select Employ">Select Employ</option>
+                        <script>
+                            for(var v in employs) {
+                                document.writeln("<option value='"+employs[v] + "'>" +employs[v] + "</option>");
+                            }
+                        </script>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

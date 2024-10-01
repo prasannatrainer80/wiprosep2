@@ -1,0 +1,28 @@
+<html>
+    <head>  
+        <script type="text/javascript" src="OnlineNew.js"></script>
+        <link type="text/css" rel="stylesheet" href="OnlineNew.css" />
+    </head>
+<body onload="LoadQuestion()">
+    <p class = "title">Online Exam @ Wipro</p>
+    <div class = "MainForm" align = "Left" >		
+        <br/><br/>
+        <form name = "ExamForm" id = "inputForm1" action = "" method = "GET">
+                <p id = "Question">
+                    This is the question
+                </p>
+                <input type = "radio" name = "OptionR" id = "Opt1" onClick = "AnswerChoosed(1)"/>
+                <label id = "Option0" name = "Name1" >1st Option</label><br />
+                <input type = "radio" name = "OptionR" id = "Opt2" onClick = "AnswerChoosed(2)"/> 
+                <label id = "Option1">2nd Option</label><br />
+                <input type = "radio" name = "OptionR" id = "Opt3" onClick = "AnswerChoosed(3)"/> 
+                <label id = "Option2">3rd Option</label><br />
+                <input type = "radio" name = "OptionR" id = "Opt4" onClick = "AnswerChoosed(4)"/> 
+                <label id = "Option3">4th Option</label><br />
+                <br />
+                <br />
+                <input type = "button" value = "Next" onClick = "NextQuestion()">
+        </form>		
+    </div> 
+</body>
+</html>
