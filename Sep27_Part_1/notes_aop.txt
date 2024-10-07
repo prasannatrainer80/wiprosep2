@@ -26,3 +26,94 @@ AOP contains various architecture elements known as
 
 6) Target 
 
+_____________________________________________________________________________
+
+Numbers, String, Arrays, Sorting, Filtering 
+
+
+How to connect with Spring Boot ORM
+
+Connect with H2 database
+
+H2 Database in spring boot is an embedded, open-source and in-memory
+database. It is a relational database management system written in java. 
+
+Here, we can discuss how to configure and perform some basic operations in 
+Spring Boot using the H2 Database. 
+
+H2 is a lightweight and fast SQL database written in java. It can run in two modes
+
+in memory
+embedded
+
+In memory mode for particularly useful for testing and development 
+
+Embedded mode used for applications that need a small, self-contained database
+
+ORM (Object-Relational Mapping) 
+
+	it is a technology that which allows you to integrate with other frameworks like hibernate, JPA (Java Persistence API) and JDO (Java Data Objects). This integration offers several advantages, making it a compelling choice for developers working with relational databases in java applications.
+
+Advantages of Using Spring with ORM 
+_____________________________________
+
+(i) Reduces the Boilerplate code  : There is no need to manually handle database connections, transactions, or session management, as spring takes care of these aspects
+
+(ii) Simplified for Testing : Appracoh of spring simplifies the testing process
+
+
+
+Spring Security : is a powerful framework that provides comprehensive security
+features for java. It has various features known as authentication, authorization
+and protection against common security theads. 
+
+
+The main use-cases for spring security we have are
+___________________________________________________
+
+1) Authentication : Manages users login and verifies their identity against various
+sources like database or OAUTh
+
+2) Authorization : Controls access to different parts of the application based on
+user roles and permissions
+
+3) Customization : Allows developers to tailore security settings and behaviours
+fit specific application requirements. 
+
+4) Auditing and Logging : Tracks and logs security evengs for monitoring and
+compliance purposes
+
+Spring Security Core is the foundation for securing your sb applications, this section you wil get into 
+
+blocks of spring secuitty
+
+architecture
+
+annotations
+
+1) Authenticaion : Is a process of verifying the identity of the computer user, it is the process of verifying the user and devices beore allowing them to access the resources, in java, the authenticationmanager interface s responsible for handling authentication events. 
+
+AuthenticationManager we have autnenticate() returns true ifit is correct. It shows an error or exception, if it denies an invalid identity.
+
+
+2) Access control : When a user or device authenticated, the next step is authorization which is the process of allowing the authority to perform certains tasks or operations, In java, AccessDecisionManager and AccessDessionVOter classes help 
+
+To implement web security, we need to use annotation known as
+
+@EnableWebSecurity
+
+for making authorization w.r.t. Roles, then we need to use UserDetailsService class
+and we need to implement WebMvcConfigurer interface.
+
+In that we have class as 
+
+InMemoryUserDetailsManager class where we can given user/password/roles
+
+InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+
+manager.createUser(User.withDefaultPasswordEncoder().username("abc").password("abc").roles("USER").build();
+
+
+protected void configure(HttpSecurity http) throws Exception
+{
+     http.anyMatcher("/).authorizeRequests().anyRequest().hasRole("ADMIN").and().httpBasic(;
