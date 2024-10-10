@@ -1,0 +1,76 @@
+Spring Boot is a project module on spring that which allows you create, configure and run
+both simple and web-based applications. 
+
+It is a spring module tghat provides RAD featgure to the spring framework,
+used to create a stand-alone spring based application that you can just run because
+it needs min. spring configuration.
+
+Spring Boot is combination of
+
+Spring Framework + Embedded HTTP Servers (Tomcat) and removes XML bean configuration
+
+There is not requirement for XML configuration. It uses convention over config
+software desing paradigm that means it decreases the effort of the developer.
+
+	-> DI Features are used in SB
+	-> It contains powerful database transaction management
+	-> It simplifies integration with other java frameworks like JPA/Hibernate
+		ORM struts etc
+
+	-> It reduces the cost and development time of application
+
+Spring Data : Simplifies data access from the relational and NOSQL db
+
+Spring Security : It is a security framework that provides robust security to apps
+
+
+Pagination/Sorting
+Exception Handling in Spring Boot
+One to One
+One to Many 
+
+relations in Spring Boot JPA
+
+Design Patterns
+
+Revision for MCQs and practical
+
+One to One Relationship : One field in the first entity exactly matches with only one field in the second entity known as one to one relationship. 
+
+In Spring Boot ORM (Object Relational Mapping), we need to use basic annotations to implement 
+operations. 
+
+@Table : Maps the entity with the table. If no @Table defined, the default value to be used. 
+
+@Entity : This annotation specifies that the class is an entity. 
+
+@Id : Declares the identifier property for the entity.
+
+@GeneratedValue : This annotation specifies the generation strategies for the values of primary keys
+
+@OneToOne : This @OneToOne annotation used to specify a one-to-one database relationship.
+
+What is the difference between Eager Loading (vs) Lazy Loading
+
+Eager Loading is a loading, in which data of the child table to be loaded automatically when 
+the parent table data loaded. 
+
+In Lazy loading when we call the get() method as getStudents() or getCourses() etc. we do, then only we get the child table contents.
+
+Basically
+
+Lazy loading means Fetch when needed
+
+Eager Loading Means fetch immediately
+
+If you specify 
+
+FetchType.LAZY = This does not load the relationships unless you invoke getter method
+
+FetchType.EAGER = This loads all the relationships immediately.
+
+Lazy initialization improves performance by avoiding unnecessary computation and reduce
+memory requirements
+
+Eager initialization takes more memory consumption and processing speed is slow
+
