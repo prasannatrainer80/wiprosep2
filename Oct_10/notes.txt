@@ -1,0 +1,139 @@
+Reactive Programming : Is a new programming paradigm which deals with handling the multiple HTTP requests asynchronously. 
+
+Normally, how the request handling steps 
+
+	-> Takes the request from the client
+	-> Process the request (may interact with other services )
+	-> Get back to the client with the response
+
+Multi-Request handling involves in various steps as
+
+	-> Sequential : Handling the requests one after another. taking the
+	2nd request only after 1st request completes
+
+	-> Concurrent/Multi-Threading : In this, 2nd request will be taken by
+	server after it initiates 1st request from the client. The server
+	do not wait till the response against the first request fetched. 
+	It makes each request processing as a sub-process. 
+	Each sub-process has the same copy of request handling logic. 
+
+	But in above process method will no longer sustain, as the pool
+	of requests are fully occupied and each request blocked by any 
+	service, as part of request processing, the other requests will 
+	not even be taken by the server till any of the process released
+
+	To avoid these kind of issues, we should adopt rective programming
+	approach. 
+
+	Features of Reactive Programming
+	________________________________
+
+	1) Asynchronous & Non-blocking : Here, in above process a thread that
+	assigned to the request not wait till the response comes back 
+	instead event will be sent to blocker. In this case, the assigned
+	thread is completely free and hence this approach will allow to accept
+	no.of requests happily because not thread is going to block.  
+
+
+	Reactive Programming mostly focuses on 4 interfaces known as
+	_____________________________________________________________
+
+
+		(i) Publisher-Publish an event (DB Driver)
+
+			Publisher is a data source who will always publish
+			an event.
+			
+		public interface publisher<T> {
+			public void subscribe(Subscriber<? super T> s);
+		}
+
+		(ii) Subscriber - Subscribe to event (Backed app/browser)
+
+			Here we can subscribe/consume the events from 
+				the publisher. 
+
+		public interface Subscribe<T> {
+			public void onSubscibe(Subscription s);
+			public void onNext(T t);
+			public void onError(Throwable t);
+			public void onComplete();
+		}
+
+		(iii) Subscription : It represents the unique 
+			relationship between a subscriber and publisher.
+
+			public interface Subscription {
+				public void request(long n);
+				public void cancel();
+			}
+
+	  	 (iv) Processor  : It represents the processing stage which
+			is both a subscriber and a publisher and must 
+			obey the contracts of both.
+
+
+	Paradigm of Reactive Flex Programming is
+	___________________________________________
+
+	(i) Subscriber will invoke subscribe() method of publisher interface
+			by passing the subscriber instance as an input
+
+	(ii)  publisher acknowledges the subscriber about its subscription 
+		by calling onSubscibe( method
+
+	(iii) Subscriber will invoke rquest() method of subscription interface to
+		fetch the data from publisher, it passes an input n means no
+		data items which subscriber wants at a time from
+		the publisher
+
+	(iv) Publisher will send stream of data to the subscriber by invoking
+		onNext(-) method of subscriber interface. As many data items
+		are there, those many times the publisher will fire
+
+	(v) Once all the data items are received by the subscriber, publisher
+		will invoke onComplete(-) method of subscriber interface to
+		confirm that it is done its job
+
+	2) Functional style of coding
+	3) Data flow as event driven stream
+	4) Backpressure on data streams 
+
+
+For the reactive programming, we need the help of WebFlux 
+
+Spring Provides web mvc framework to handle http requests, but it is 
+blocking  non-reactive in nature, so to support reactive programming 
+sprig provides one more framework in Spring 5 known as WebFlux.
+
+Spring web flux internally uses Project Reactor and its publisher 
+implementations flux and mono
+
+Mono -> A publisher that can emit 0 or 1 element
+
+Flux -> A publisher that can emit 0 to N elemnts 
+
+Mono and Flux are like Optional & Stream 
+
+Flux 
+
+	Flux is an implementation of publisher
+
+	It will emit 0 to N elements and/or a complete or an error call
+
+	Stream Pipeline is synchronous whereas Flux pipeline is completely
+	asynchronous.  It will emit values only when there is a downstream
+	subscriber.
+
+Mono
+	Mono is another implementation of Publisher
+	It emits at most of one item then terminates with an onComplete 
+	signal r onError signal
+	Like Flux, Mono is also asynchronous nature.
+
+The dependency we need to use for Spring Web Flux 
+
+	<depedency>
+		<groupId>org.sprigframework.boot</groupId>
+		<artifactId>spring-boot-starter-webflux</artifactId>
+	</dependency>
