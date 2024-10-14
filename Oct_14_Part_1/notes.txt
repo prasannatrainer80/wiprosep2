@@ -1,0 +1,44 @@
+Unit Testing using Spring Reactive Programming
+
+API Testing using Reactive Programming
+
+JWT Authentication 
+
+In Spring Boot, webflux reactive programming allows you to support asynchronous, non-blocking
+and event-driven applciations when it comes to testing in the spring webflux, 
+
+we have various ways to implement testing as
+
+1) Unit Testing : It can involve testing individual components of the application. In Spring WebFlux, this might include testing individual handlers, controllers and services using mocking framework. 
+
+2) Integration Testing : It can involve testing for the interactions between the diff components of the application. This might include, testing individual handlers, controllers, and services using mocking 
+
+3) WebTestClient : It is the testing utility to provide to test http requests against the application and verify the responses. We can use it to test both functional and reative endpoints. 
+
+4) MockServer : This is the library that can allow the mock HTTP servers for testing purposes it can be used to mock external dependencies or the services that the application interacts with over http. 
+
+5) SpringBootTest : This is an annotation that can be provided by default with spring boot allows the entire application context and perform the end to end tests on the application.
+
+Spring Boot Testing have various annotations : 
+__________________________________________________
+
+1) @RunWith : It can be used at the class level to specify the spring runner and which is responsible for the executing the tests within the spring context and it can enable the integration of the spring TestCotext Framework.
+
+http://localhost:1119/users/
+
+java.lang.AssertionError: Response body expected:
+<User(id=1, name=Subbarayudu, age=23)> but was:
+<User(id=1, name=Subbarayudu, age=23)>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.reactive.server.DefaultWebTestClient$DefaultBodySpec.lambda$isEqualTo$0(DefaultWebTestClient.java:544)
+	at org.springframework.test.web.reactive.server.ExchangeResult.assertWithDiagnostics(ExchangeResult.java:232)
+	at org.springframework.test.web.reactive.server.DefaultWebTestClient$DefaultBodySpec.isEqualTo(DefaultWebTestClient.java:543)
+	at com.example.demo.UserControllerTest.getUserById(UserControllerTest.java:33)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+
+
+
