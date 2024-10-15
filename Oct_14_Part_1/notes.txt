@@ -24,21 +24,17 @@ __________________________________________________
 
 1) @RunWith : It can be used at the class level to specify the spring runner and which is responsible for the executing the tests within the spring context and it can enable the integration of the spring TestCotext Framework.
 
-http://localhost:1119/users/
-
-java.lang.AssertionError: Response body expected:
-<User(id=1, name=Subbarayudu, age=23)> but was:
-<User(id=1, name=Subbarayudu, age=23)>
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.reactive.server.DefaultWebTestClient$DefaultBodySpec.lambda$isEqualTo$0(DefaultWebTestClient.java:544)
-	at org.springframework.test.web.reactive.server.ExchangeResult.assertWithDiagnostics(ExchangeResult.java:232)
-	at org.springframework.test.web.reactive.server.DefaultWebTestClient$DefaultBodySpec.isEqualTo(DefaultWebTestClient.java:543)
-	at com.example.demo.UserControllerTest.getUserById(UserControllerTest.java:33)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+In Reactive Web Programming, we have 6 methods, to handle error. 
 
 
+-> onErrorReturn : Return fall back value for the entire stream. Eg if there's a flux of 10 elements, and error happens at element 3, then rest 4,5,6 wont be executed. 
 
+-> onErrorResume : Returns fall back value in terms of Mono/Flux. 
 
+-> onErrorContinue : Consumes error data, and does not split it over.  It considers the consume for the error elements, and leave the downstream chain as it 
+for good elements. Above example if we have flux of 10 elements
+and error happens at element 3, then all the elements except 3 will be executed normally 
+
+-> doOnError : Consumes error and spills it over. Stops execution for further elements in stream.
+
+-> onErrorMap : Casts one error to another error. 
