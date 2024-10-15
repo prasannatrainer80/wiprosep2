@@ -1,0 +1,32 @@
+User -> (userId+,userFirstName,userLastName,userId,password,
+email,gender,dateOfBirth,domain,status,phoneNo)  -> status (ACTIVE/INACTIVE)
+
+-> AddUser can be done the admin
+
+-> Login Using EmailId (or) Login Using PhoneNo 
+-> Logout
+
+
+Admin -> (AdminID,AdminName,AdminUserName,AdminPassword,
+status)
+
+SongsLibrary(SongId,SongName,Singer,MusicDirector,releaseDate,AlbumName,songStatus,adminId)
+
+songStatus (FREE/PREMIUM) -> means Free means in songs search all can see 
+
+PREMIUM -> Means only paid user can see 
+
+SongsLibrary -> CRUD Operations by Admin 
+
+NotifySongs -> Means if any user adds the songs to his email we need to notify if any new song added. 
+
+_________________________________________________________
+
+SongsLibrary User Operations
+
+See all songs in library
+search song by name
+
+SearchBy (Music Director/Album/Artist) 
+
+
