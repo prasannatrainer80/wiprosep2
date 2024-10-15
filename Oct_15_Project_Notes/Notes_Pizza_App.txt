@@ -1,0 +1,32 @@
+Admin(AdminID+,AdminName,AdminUserName,AdminPassword,AdminEmail,AdminPhoneNo,Status)
+
+AddAdmin,SearchAdmin,ShowAdmin
+
+password make it encrypted. 
+
+Login and Logout
+
+Menu(MenuID+,ItemName,Category,Price,AdminID-)
+
+1,Garlic Pizza,Pizza,888,A1
+2,Thumps Up,Beverage,30,A1
+
+Admin only needs to AddMenu, UpdateMenu, DeleteMenu,ShowMenu
+
+Customer(CustId+,CustomerName,CustomerUserName,CustomerPassword,CustomerEmail,CustomerMobile)
+
+Add Customer
+Login Customer
+
+CustomerWallet(WalletID+,CustomerID-,WalletType,WalletAmount)
+
+1,100,PHONEPE,1000,2,100,NETBANKING,20000
+
+
+PlaceOrder -> As a customer we can Add Multiple Items to a single Order
+
+OrderDetails(OrderId+,CustomerID-,MenuID-,QtyOrd,BillAmount,OrderComments,OrderStatus)
+
+OrderStatus By Default its PENDING, to be accepted by Admin
+
+BillAmount to be calculated and deducted from customer Wallet 
