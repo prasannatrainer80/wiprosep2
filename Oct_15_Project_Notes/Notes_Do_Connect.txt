@@ -1,0 +1,30 @@
+User -> (userId+,userFirstName,userLastName,userId,password,
+email,gender,dateOfBirth,domain,status)  -> status (ACTIVE/INACTIVE)
+
+   SearchUser,ShowUser
+  -> Login(username,password) if correct go to menu page
+  -> LogOut 
+
+Admin -> (AdminID,AdminName,AdminUserName,AdminPassword,
+status,
+
+	-> addAdmin, showAdmin,	
+	-> loginAdmin,
+	-> addUser,deactiveUser 
+
+______________________________________________________________________
+
+Make database 
+Make Spring Boot Project 
+	Make Entity Classes (Admin, User)
+Make Repository Classes for Admin and User
+Make Service Classes for Admin and User
+
+In Jsp page implement the functionalities. 
+
+__________________________________________
+
+Vipul
+Khushi
+Gangamani
+Jyothi Kumari
