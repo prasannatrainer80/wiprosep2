@@ -1,0 +1,41 @@
+Owner(OwnerId+,OwerName,OwerUserName,OwnerPassword,Email,PhoneNo)
+
+AddOwner, ShowOwner,SearchOwner,DeleteOwner
+
+Apps(AppId+,OwnerID-,AppType,AppName,ReleaseDate,Version,Ratings,Genre,AppType,status)
+
+	AppType -> PAID/FREE 
+	staus -> ACTIVE/INACTIVE 
+Example : If you type app as WhatsApp then min 6 it shows,but identify based on version and releaseDate 
+
+AppsPopularity(AppsID+,AppId-,UsersDownloaded) 
+
+
+
+AddApp can be done by Admin Only. 
+
+UserData(UserId,UserName,Password,Email,PhoneNo) 
+
+UserAppsDownloaded(downloadID+,UserId-,AppID-) 
+
+Once you download then the UserDownloaded value to be increased in AppsPopularity Table.
+
+=> Database
+
+=> Spring Boot Project
+
+=> Make Model classes using Lombok
+
+=> Make Repository, Service 
+
+=> Make Controller
+
+=> Implement jsp pages Login and Logout 
+
+
+
+
+
+
+
+
