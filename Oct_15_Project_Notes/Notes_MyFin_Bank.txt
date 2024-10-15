@@ -1,0 +1,29 @@
+AccountHolder/Customer(AccountNo+,FirstName,LastName,City,State,
+Gender,DateOfOpen,Amount,Email,MobileNo,UserName,Password,Mpin,CheqFacil,AccountType,
+Status) 
+
+Transactions(TranID+,AccountNo-,TransactionAmount,TransactionType,TransactionDate)
+
+-> CreateAccount 
+	accountNo to be generated automatically.
+-> SearchAccount
+
+-> CloseAccount Change the status to INACTIVE
+
+-> DepositFunds (AccountNo,DepositAmount)
+
+In AccountHolder Table Amount to be updated (means added) and in Transactions take the record to be inserted as 
+TransId 1, AccountNo 100, TransactionAmount 5000, TransactionType C, TransactionDate 15 Oct 24
+
+-> WithdrawFunds (AccountNo,WithdrawAmount) 
+
+First Check the funds are available in AccoutHolder Table, if so, then 
+
+In AccountHolder Table Amount to be updated (means subtracted) and in Transactions take the record to be inserted as 
+TransId 1, AccountNo 100, TransactionAmount 5000, TransactionType D, TransactionDate 15 Oct 24
+
+=> TransFer Funds (PhonePe) 
+	Once customer Logs in in that add One option as PhonePe(toPhoneNumber,AmountDeposit)
+
+then the amount will be added to account where toPhoneNumber linked. 
+
