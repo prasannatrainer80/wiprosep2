@@ -1,0 +1,28 @@
+
+	public static String sendMail(String toEmail,String subject,String body) throws MessagingException {
+        String from = "prasanna.trainer@gmail.com";
+        String host = "smtp.gmail.com";
+        Properties properties = System.getProperties();
+        properties.put("mail.smtp.host", host);
+        properties.put("mail.smtp.port", "465");
+        properties.put("mail.smtp.ssl.enable", "true");
+        properties.put("mail.smtp.auth", "true");
+        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication("prasanna.vsp80@gmail.com", "soqdhechjkcchkgl");
+            }
+        });
+        session.setDebug(true);
+
+            MimeMessage message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(from));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
+            message.setSubject(subject);
+            message.setText(body);
+
+            System.out.println("sending...");
+            Transport.send(message);
+            return "Sent message successfully....";
+        }
+}
+
