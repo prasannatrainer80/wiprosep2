@@ -1,0 +1,18 @@
+
+
+Add Song
+Update Song
+Show Songs
+Notifications
+Delete Songs 
+
+Admin Module
+
+User
+
+Select Song and add to playlist
+
+as maintain different playlists for the user as Devotional, Favourite etc...
+
+
+
