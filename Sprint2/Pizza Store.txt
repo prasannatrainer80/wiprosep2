@@ -1,0 +1,14 @@
+Pizza Store
+
+1) Add Menu, Show Menu, Search Menu, Delete Menu (Admin)
+
+2) UserWallet(WalletId+,UserId-,WalletAmount,WalltType)
+
+
+
+2) Place Order (OrderID, MenuID-,WalltType,UserId-,QtyOrderd,BillAmount,OrderDate, OrderStatus,OrderComments)
+
+	OrderStatus by default Pending
+
+3) Accept/Reject Order
+
