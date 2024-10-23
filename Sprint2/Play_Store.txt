@@ -1,0 +1,8 @@
+-> Display apps based on rating
+
+-> Give rating to apps
+
+-> Write comments for app
+
+-> Filter by comment and rating wise
+
