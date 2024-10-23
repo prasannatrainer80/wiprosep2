@@ -1,0 +1,11 @@
+
+Do Connect
+
+Questions and Answers to be done
+
+as one question will have multiple answers, as Raise a question and identify answers for those.
+
+As you can select a question in UI and show the answers in table.
+
+Make one chat forum where people can connect and chat. 
+
