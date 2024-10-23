@@ -1,0 +1,22 @@
+
+
+Fixed Deposits : 
+_________________
+
+If a person makes fixed deposit the term starts min from 6 months and you need to pay amount with interest. 
+
+Example : If one person did fd in oct 23rd, for 1 year of 1 lakh amount, then oct 23rd 2025 he will receive 
+
+1,15,0000 amount as 8% interest
+
+if he cancels fd then assume he cancelled after 2 months, then 2 months interest as 1250 * 2 to be added.
+
+Recurring Deposits : 
+_____________________
+
+Please offer 9% interest on recurring deposit as payment terms as 12 months 24 months 36 months like 
+
+as assume monthly paying 10000 as Rd, for 12 months 1200000 + 16000 amount to be added
+
+As amount to be transferred from savings account to fd account automatically, and you can see list of fds available for a accountholder
+
